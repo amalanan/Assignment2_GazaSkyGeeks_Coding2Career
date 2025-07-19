@@ -1,0 +1,20 @@
+import 'dart:io';
+
+  void main() {
+  print('Enter number of days ');
+  int numberOfDays = int.parse(stdin.readLineSync() ?? '0');
+  int numberOfYears = numberOfDays ~/ 365;
+  int remainingDaysAfterYears = numberOfDays % 365;
+  
+  int numberOfTotalMonths = numberOfDays ~/ 30;
+
+  int numberOfRemainingMonths = remainingDaysAfterYears ~/ 30;
+  int numberOfRemainingDays =  remainingDaysAfterYears % 30;
+
+  print('number of days you entered ' '$numberOfDays');
+  print('number of years '  '$numberOfYears');
+  print('number of total Months '  '$numberOfTotalMonths');
+  print('number of remaining months after a year '  '$numberOfRemainingMonths');
+  print('number of remaining days after a year '  '$numberOfRemainingDays');
+
+}
