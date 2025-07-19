@@ -1,0 +1,14 @@
+//Task2
+import 'dart:io';
+
+  void main() {
+  print('Enter a double number: ');
+  double input = double.parse(stdin.readLineSync() ?? '0.0');
+
+  print('Ceil: ${input.ceil()}');
+  print('Floor: ${input.floor()}');
+  print('Round: ${input.round()}');
+
+  print('Value: $input');
+  print(input > 10 ? 'Large' : 'Small');
+}
