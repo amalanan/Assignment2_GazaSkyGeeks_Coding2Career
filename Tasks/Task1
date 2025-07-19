@@ -1,0 +1,33 @@
+//Task1
+import 'dart:io';
+void main(List<String> arguments) {
+print('Enter number 1: ');
+  int number1 = int.parse(stdin.readLineSync() ?? '0');
+  print('Enter number 2: ');
+  int number2 = int.parse(stdin.readLineSync() ?? '0');
+  bool parityOfNumber1 = number1 % 2 == 0;
+  bool parityOfNumber2 = number2 % 2 == 0;
+  bool positiveParity = (number1 == 0 && number2 == 0);
+  bool evenParity = parityOfNumber1 || parityOfNumber2;
+  bool bothEven = parityOfNumber1 && parityOfNumber2;
+  print(
+    positiveParity
+        ? 'both are positive'
+        : evenParity
+        ? bothEven
+            ? 'both is Even'
+            : 'One of them is Even'
+        : 'both are Odd',
+  );
+  ++number1;
+  --number2;
+  int incrementedNumber = number1;
+  int decrementedNumber = number2;
+  print('number1: $number1 ,, incremented number1: $incrementedNumber');
+  print('number2: $number2 ,, decremented number2: $decrementedNumber');
+  int castedIncrementedNumber1 = incrementedNumber.toInt();
+  print('Casted to Int number: $castedIncrementedNumber1');
+  int bitWiseNot = ~castedIncrementedNumber1;
+  print('Bitwise NOT: $bitWiseNot');
+  print(incrementedNumber > decrementedNumber ? 'true' : 'False');
+}
