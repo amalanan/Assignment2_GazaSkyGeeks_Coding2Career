@@ -1,0 +1,19 @@
+import 'dart:io';
+
+  void main() {
+  const List<int> items = [2, 4, 6, 8, 10];
+  print('List: $items');
+
+  Set<int> listToSet = items.toSet();
+  print('Set: $listToSet');
+
+  listToSet.add(12);
+  print('Updated Set: $listToSet');
+
+  Map<int, int> map = Map.fromIterable(
+    listToSet,
+    key: (item) => item,
+    value: (item) => item * 3,
+  );
+  print('Map: $map');
+}
